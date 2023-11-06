@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+.full-wrapper {
+    width: 1200px;
+    min-width: 800px;
+
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation-bar {
+    padding: 10px;
+    display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-title {
+    font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo {
+    margin-left: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.submit-form {
+    background-color: #eeeeee;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px;
+
+    font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title-box,
+.body-box {
+    margin: 0 30px;
+    padding: 5px;
+
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.add-btn {
+    margin-left: auto;
+    background-color: #008080;
+    padding: 10px 40px;
+    border-radius: 8px;
+    border-color: transparent;
+
+    color: white;
+    font-weight: bold;
+}
+
+.working-label,
+.done-label {
+    margin: 20px;
+}
+
+.done-card,
+.working-card {
+    width: 300px;
+    background-color: white;
+
+    margin: 20px;
+    border-radius: 10px;
+    border: 3px solid #008080;
+    padding: 35px;
+}
+
+.card-title {
+    margin: 0;
+
+    font-size: 25px;
+}
+
+.remove-btn {
+    background-color: transparent;
+    width: 130px;
+    margin: 0 10px 0 0;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 2px solid red;
+}
+
+.done-btn,
+.cancel-btn {
+    background-color: transparent;
+    width: 130px;
+    margin: 0 10px 0 0;
+    padding: 10px 10px;
+    border-radius: 8px;
+    border: 2px solid green;
 }
