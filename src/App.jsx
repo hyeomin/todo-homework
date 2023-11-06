@@ -5,7 +5,7 @@ import Done from "./Done";
 
 function App() {
     const [todoList, setTodoList] = useState([
-        { id: 0, title: "test", body: "test", isDone: false },
+        { id: 0, title: "", body: "", isDone: false },
     ]);
 
     const [title, setTitle] = useState("");

@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+1. **JSX 문법**이란 무엇일까요?
+   JSX 문법은 JavaScript를 확장한 문법으로, HTML의 구조로 브라우저에 UI를 표현하는 React 요소를 작성할 수 있게 해줍니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. 사용자가 입력하는 값, 또는 이미 입력된 값, 투두의 타이들과 같은 **애플리케이션의 상태를 관리하기 위해 리액트의 어떤 기능을 사용하셨나요**?
+   애플리케이션의 상태를 관리하기 위해 사용자가 사용한 기능은 React의 useState 훅입니다. 이 훅을 사용하여 사용자는 컴포넌트의 상태를 생성하고, 그 상태를 업데이트 했습니다. 예를 들어, 투두의 타이틀과 본문을 관리하기 위해 setTitle과 setBody 같은 상태 업데이트 함수를 사용했습니다.
 
-## Available Scripts
+3. 애플리케이션의 **상태 값들을 컴포넌트 간 어떤 방식으로 공유하셨나요**?
+   상태 값들을 컴포넌트 간 공유하기 위해, App 컴포넌트에서 상태를 관리하고, 해당 상태와 상태를 변경하는 함수들을 하위 컴포넌트인 Working과 Done으로 props를 통해 전달했습니다. 이 방법으로 각 컴포넌트는 필요한 상태와 함수들을 사용할 수 있습니다.
 
-In the project directory, you can run:
+4. 기능 구현을 위해 **불변성 유지가** 필요한 부분이 있었다면 하나만 설명해 주세요.
+   새로운 투두를 추가하거나 투두의 상태를 변경할 때입니다. 예를 들어, removeBtnHandler 함수에서 filter 메소드를 사용하여 기존 todoList 상태를 직접 변경하지 않고, 새로운 배열을 생성하여 불변성을 유지했습니다.
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. 반복되는 컴포넌트를 파악하고 재사용할 수 있는 **컴포넌트로 분리해 보셨나요?** 그렇다면 **어떠한 이점이 있었나요?**
+   Working과 Done 컴포넌트는 반복되는 구조로, 각각의 투두 아이템을 나타내기 위해 재사용되는 컴포넌트로 분리되었습니다. CSS를 할 때를 포함한 다양한 경우에서 코드 재사용성과 가독성을 높여주며, 유지보수를 용이하게 합니다. 또한, 각 컴포넌트의 책임을 분명히 함으로써 애플리케이션의 구조를 더 명확하게 할 수 있는 이점이 있습니다.
